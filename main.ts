@@ -12,9 +12,14 @@ input.onButtonPressed(Button.A, function () {
     led.plot(colonne, ligne)
 })
 input.onButtonPressed(Button.B, function () {
-    if (colonne > 4) {
+    if (colonne == 5) {
+        led.unplot(colonne, ligne)
         colonne = -1
         ligne += 1
+        if (ligne > 4) {
+            ligne = 0
+        }
+        led.plot(colonne, ligne)
     }
     led.unplot(colonne, ligne)
     colonne += 1
