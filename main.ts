@@ -19,7 +19,6 @@ input.onButtonPressed(Button.B, function () {
         if (ligne > 4) {
             ligne = 0
         }
-        led.plot(colonne, ligne)
     }
     led.unplot(colonne, ligne)
     colonne += 1
